@@ -308,7 +308,7 @@ const ProductForm = () => {
 	return (
 		<div className='px-72 py-5 bg-bgGray1'>
 			<Toast type={toastType} message={toastMessage} open={open} handleOpen={handleOpen} />
-			<Card className='w-full h-auto p-10'>
+			<Card className='w-full h-auto p-10 border-'>
 				<h1 className='font-bold'>Add New Product</h1>
 				<div className='w-full'>
 					<div className='gap-5'>
@@ -412,8 +412,8 @@ const ProductForm = () => {
 				</div>
 
 				<div className='flex justify-end gap-5 items-center'>
-					<Button variant='outlined' color='green' className='capitalize w-28 text-sm py-2'>Cancel</Button>
-					<Button onClick={handleSubmit} loading={formSubmitLoading} color='green' className='capitalize w-28 text-sm py-2'>Save</Button>
+					<Button variant='outlined' className='capitalize w-28 text-sm py-2'>Cancel</Button>
+					<Button onClick={handleSubmit} loading={formSubmitLoading} className='capitalize w-28 text-sm py-2 bg-[#350145]'>Save</Button>
 				</div>
 			</Card>
 		</div>

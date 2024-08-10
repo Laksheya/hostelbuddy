@@ -120,11 +120,11 @@ const SignUpForm = ({ open, setOpen, userData }) => {
 					</div>
 				</DialogBody>
 				<DialogFooter>
-					<Button color="pink" onClick={() => {setOpen(false); setFormData({})}}>
+					<Button variant='outlined' onClick={() => {setOpen(false); setFormData({})}}>
 						Cancel
 					</Button>
 					<p>&nbsp;&nbsp;</p>
-					<Button color="green" onClick={handleSubmit} loading={loading}>
+					<Button className="bg-[#350145]" onClick={handleSubmit} loading={loading}>
 						Submit
 					</Button>
 				</DialogFooter>

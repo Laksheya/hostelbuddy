@@ -97,22 +97,31 @@ const ProductDetails = () => {
                                 <img src={msgIcon} alt="" /> */}
                             </div>
                         </div>
-                        <div className='mt-5'>
-                            <h3 className='font-bold text-lg mb-4 just'>Description</h3>
-                            <h5>
-                                <span className='font-bold'>Phone:</span> {productData?.owner.phone}
-                            </h5>
-                            <h5>
-                                <span className='font-bold'>Hostel:</span> {productData?.owner.hostel.name}
-                                ({productData?.owner.hostel.isInsideCampus ? "Inside Campus" : "Outside Campus"})
-                            </h5>
-                            <h5>
-                                <span className='font-bold'>Phone:</span> {productData?.owner.phone}
-                            </h5>
-                            <h5>
-                                <span className='font-bold'>Phone:</span> {productData?.owner.phone}
-                            </h5>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                            <div className=" p-4 text-white rounded-lg bg-[#350145] shadow-lg">
+                                <h4 className="text-md font-semibold">
+                                    <span className="font-bold">Phone No:</span> {productData?.owner?.phone}
+                                </h4>
+                            </div>
+                            <div className="p-4 text-white rounded-lg bg-[#350145] shadow-lg">
+                                <h4 className="text-md font-semibold">
+                                    <span className="font-bold">Room No:</span> {productData?.owner?.room}
+                                </h4>
+                            </div>
+                            <div className="p-4 text-white rounded-lg bg-[#350145] shadow-lg">
+                                <h4 className="text-md font-semibold">
+                                    <span className="font-bold">Hostel:</span> {productData?.owner?.hostel?.name}
+                                    {/* ({productData?.owner?.hostel.isInsideCampus ? "Inside Campus" : "Outside Campus"}) */}
+                                </h4>
+                            </div>
+                            <div className="p-4 text-white rounded-lg bg-[#350145] shadow-lg">
+                                <h4 className="text-md font-semibold">
+                                    ({productData?.owner?.hostel?.isInsideCampus ? "Inside Campus" : "Outside Campus"})
+                                </h4>
+                            </div>
+
                         </div>
+
                     </div>
                     <div className='w-1/2 border overflow-hidden border-[#e9ebed] rounded-xl'>
                         {requested ? <ProductStatus /> : <ProductRequestForm />}

@@ -218,7 +218,7 @@ export default function StickyNavbar() {
 					{/* <div className="mr-4 hidden lg:block">{navList}</div> */}
 					<div className={`flex items-center gap-x-1 ${isAuthenticated && 'hidden'}`}>
 						<Button
-							variant="text"
+							variant="outlined"
 							size="sm"
 							className="inline-block"
 							onClick={signup}

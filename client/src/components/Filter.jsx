@@ -1,5 +1,5 @@
 import { Card, Chip, Typography, TextField, IconButton, Tooltip } from '@material-tailwind/react';
-import React, { useState , useEffect } from 'react';
+import React, { useEffect, useState , useEffect } from 'react';
 import { FaDeleteLeft } from "react-icons/fa6";
 import deleteLeftIcon from '../assets/delete-left.svg'
 import { getDataFromApi } from '../utility/api'
@@ -19,6 +19,7 @@ const Filter = ({setSelectedCategories,selectedCategories}) => {
 
     
     const randomWidths = [16, 12, 10];
+
     const handleCategoryClick = (category) => {
         const isSelected = selectedCategories?.some((selected) => selected._id === category._id);
         

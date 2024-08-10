@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "author": "Laksheya, Shivendra, Arvind, Aditya",
+  "author": "Laksheya, Shivendra, Aditya, Omi",
   "license": "ISC",
   "description": "",
   "dependencies": {

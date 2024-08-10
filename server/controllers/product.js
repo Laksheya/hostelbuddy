@@ -1,6 +1,5 @@
 import Product from "../models/product.js";
-
-
+import User from "../models/user.js";
 
 export const getProductsMetaData = async (req, res) => {
     try {
@@ -154,5 +153,23 @@ export const getMyProduct = async (req, res) => {
 
     } catch (error) {
 
+    }
+}
+
+
+
+export const userProduct= async(req,res) => {
+    try {
+        const userId = req.user._id;
+
+        const products = await Product.find({ owner: userId });
+
+        if (!products.length) {
+            return res.status(404).json({ message: "No products found for this user" });
+        }
+
+        res.status(200).json(products);
+    } catch (error) {
+        res.status(500).json({ message: "Server error", error });
     }
 }
